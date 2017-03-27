@@ -1,0 +1,33 @@
+{
+  "name": "angularsoccerscore",
+  "version": "1.0.0",
+  "description": "Soccer Score written in Angular 2",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresCL/AngularSoccerScore.git"
+  },
+  "keywords": [
+    "angular2",
+    "angular",
+    "soccer",
+    "score",
+    "bootstrap4",
+    "gulp"
+  ],
+  "author": "Andrés Contreras Leiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresCL/AngularSoccerScore/issues"
+  },
+  "homepage": "https://github.com/AndresCL/AngularSoccerScore#readme"
+}
