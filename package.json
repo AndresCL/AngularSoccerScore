@@ -1,33 +1,40 @@
 {
   "name": "angularsoccerscore",
   "version": "1.0.0",
-  "description": "Soccer Score written in Angular 2",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
-  },
-  "devDependencies": {
-    "gulp-sass": "^3.1.0"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndresCL/AngularSoccerScore.git"
-  },
-  "keywords": [
-    "angular2",
-    "angular",
-    "soccer",
-    "score",
-    "bootstrap4",
-    "gulp"
-  ],
-  "author": "Andrés Contreras Leiva",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AndresCL/AngularSoccerScore/issues"
+  "devDependencies": {
+    "@types/jasmine": "2.5.36",
+    "@types/node": "^6.0.46",
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10"
   },
-  "homepage": "https://github.com/AndresCL/AngularSoccerScore#readme"
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "~2.4.0",
+    "core-js": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.4"
+  }
 }
