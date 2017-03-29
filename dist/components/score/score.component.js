@@ -15,7 +15,7 @@ var ScoreComponent = (function () {
     function ScoreComponent(scoreService) {
         this.scoreService = scoreService;
         // Initializing
-        this.feedUrl = 'http://www.scorespro.com/rss2/live-soccer.xml';
+        this.feedUrl = 'http://worldcup.sfg.io/matches';
     }
     // Calling on init
     ScoreComponent.prototype.ngOnInit = function () {
@@ -24,12 +24,12 @@ var ScoreComponent = (function () {
     ScoreComponent.prototype.refreshFeed = function () {
         var _this = this;
         this.scoreService.getFeedContent(this.feedUrl)
-            .subscribe(function (feed) { return _this.scores = feed.items; }, function (error) { return console.log(error); });
+            .subscribe(function (feed) { return _this.scores = feed; }, function (error) { return console.log(error); });
     };
     ScoreComponent = __decorate([
         core_1.Component({
             selector: 'scorecard',
-            template: "\n        <!-- Each score result found in service -->\n        <div class=\"score-card col-xs-6 col-sm-3\" *ngFor=\"let score of scores\">\n            <strong><img src=\"app/assets/img/ball.png\" width=\"30\"> {{score.description}}</strong>\n            <strong>({{score.pubDate}})</strong>\n        </div>\n    ",
+            template: "\n        <!-- Each score result found in service -->\n        <div class=\"card score-card col-xs-6 col-sm-4\" *ngFor=\"let score of scores\">\n            <!--<img class=\"card-img-top\" src=\"http://loremflickr.com/320/240/soccer\" alt=\"Card image cap\">-->\n            <div class=\"card-block\">\n                <h4 class=\"card-title\">{{score.home_team.country}} {{score.home_team.goals}} <img src=\"app/assets/img/ball.png\" width=\"10\"> {{score.away_team.country}} {{score.away_team.goals}}</h4>\n                <p class=\"card-text\"><strong>Status: </strong> {{score.status}}</p>\n                \n                <ul class=\"list-group\">\n                    <li class=\"list-group-item\"><strong>Location</strong> {{score.location}}</li>\n                    <li class=\"list-group-item\"><strong>Winner</strong> {{score.winner}}</li>\n                    <li class=\"list-group-item\"><strong>Date</strong> ({{score.datetime | date: 'dd/MM/yyyy'}})</li>\n                </ul>\n                \n            </div>\n        </div>\n\n\n    ",
             styleUrls: ['./app/components/score/score.style.css'],
             providers: [score_service_1.ScoreService]
         }), 

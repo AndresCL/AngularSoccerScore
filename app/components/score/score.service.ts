@@ -6,14 +6,12 @@ import { Score } from './score';
 @Injectable()
 export class ScoreService{
 
-    private rssToJsonServiceBaseUrl: string = 'https://rss2json.com/api.json?rss_url=';
-
     constructor(private http : Http){
     }
 
     // Getting feed
     getFeedContent(url: string): Observable<Score> {
-        return this.http.get(this.rssToJsonServiceBaseUrl + url)
+        return this.http.get(url)
                 .map(this.extractFeeds)
                 .catch(this.handleError);
     }

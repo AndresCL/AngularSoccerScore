@@ -2,3 +2,10 @@
     
     
 }
+
+.card-block{
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    padding: 10px;
+    margin-bottom: 20px;
+}

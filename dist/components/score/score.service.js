@@ -14,11 +14,10 @@ var Rx_1 = require('rxjs/Rx');
 var ScoreService = (function () {
     function ScoreService(http) {
         this.http = http;
-        this.rssToJsonServiceBaseUrl = 'https://rss2json.com/api.json?rss_url=';
     }
     // Getting feed
     ScoreService.prototype.getFeedContent = function (url) {
-        return this.http.get(this.rssToJsonServiceBaseUrl + url)
+        return this.http.get(url)
             .map(this.extractFeeds)
             .catch(this.handleError);
     };

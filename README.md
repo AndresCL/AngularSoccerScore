@@ -18,6 +18,14 @@
 - Start the app: `npm start`
 - View the app: <http://localhost:3000>
 
+## Data Source
+
+We are going to use this end point:
+
+`http://worldcup.sfg.io/matches`
+
+Check out this great project serving our endpoint: https://github.com/estiens/world_cup_json
+
 ## Usage
 
 - The Angular application is found in the `app/` directory
