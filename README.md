@@ -1,5 +1,7 @@
 # Angular Soccer Score
+This is a tiny Angular2 component that loads data from a json webservice and displays the results in a fancy way.
 
+![alt tag](https://raw.githubusercontent.com/AndresCL/AngularSoccerScore/master/demo.png)
 
 ## About
 
