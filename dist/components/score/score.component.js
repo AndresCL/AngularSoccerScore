@@ -29,7 +29,7 @@ var ScoreComponent = (function () {
     ScoreComponent = __decorate([
         core_1.Component({
             selector: 'scorecard',
-            template: "\n        <!-- Each score result found in service -->\n        <div class=\"score-card col-xs-6 col-sm-3\" *ngFor=\"let score of scores\">\n        \n        </div>\n    ",
+            template: "\n        <!-- Each score result found in service -->\n        <div class=\"score-card col-xs-6 col-sm-3\" *ngFor=\"let score of scores\">\n            <strong><img src=\"app/assets/img/ball.png\" width=\"30\"> {{score.description}}</strong>\n            <strong>({{score.pubDate}})</strong>\n        </div>\n    ",
             styleUrls: ['./app/components/score/score.style.css'],
             providers: [score_service_1.ScoreService]
         }), 

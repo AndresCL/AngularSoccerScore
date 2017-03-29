@@ -7,7 +7,8 @@ import { ScoreService } from './score.service';
     `
         <!-- Each score result found in service -->
         <div class="score-card col-xs-6 col-sm-3" *ngFor="let score of scores">
-        
+            <strong><img src="app/assets/img/ball.png" width="30"> {{score.description}}</strong>
+            <strong>({{score.pubDate}})</strong>
         </div>
     `,
     styleUrls: ['./app/components/score/score.style.css'],

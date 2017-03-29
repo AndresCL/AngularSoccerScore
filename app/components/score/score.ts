@@ -1,6 +1,6 @@
 export interface Score{
     title: string;
-    date: string;
+    pubDate: string;
     link: number;
     items: string;
     guid?: string;
