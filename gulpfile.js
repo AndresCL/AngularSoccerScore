@@ -13,5 +13,5 @@ gulp.task('html', function() {
     .pipe(gulp.dest('dist'));
 });
 
-// Lets us type "gulp" on the command line and run all of our tasks
+// Run all
 gulp.task('default', ['html', 'images']);
